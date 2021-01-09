@@ -1,16 +1,17 @@
 @use '../mixins' as *;
 
 .root {
-	@include gradient-background;
-	
-	padding: 30px;
+  @include gradient-background;
+
+  padding: 30px;
 }
 
 .title {
-	font-weight: 900;
-	color: white;
+  font-weight: 900;
+  color: white;
+  border-bottom: 5px solid transparentize(white, 0.9);
 }
 
 .posts {
-	margin-top: 30px;
+  margin-top: 30px;
 }
