@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 import Post from 'models/Post';
 import PostHeader from './PostHeader';
-import PostBody from './PostBody';
 
 import styles from 'styles/components/PostPreview.module.scss';
 
