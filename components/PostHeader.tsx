@@ -28,7 +28,6 @@ const PostHeader = ({ allowLinks = true, post }: PostHeaderProps) => (
     </p>
     <p className={styles.topics}>{post.topics.join(', ')}</p>
     <p className={styles.date}>{post.date}</p>
-    {/* <p className={styles.readMore}>Read more...</p> */}
   </div>
 );
 

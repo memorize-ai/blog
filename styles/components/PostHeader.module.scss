@@ -2,9 +2,9 @@
   background: linear-gradient(45deg, #5a2aff, #00aff4);
   margin-bottom: 20px;
   border-color: black;
-  padding: 25px;
+  padding: 20px;
   transition: transform 0.3s;
-  box-shadow: -4px 0 30px 0 transparentize(black, 0.1);
+  box-shadow: 0px 0px 25px transparentize(black, 0.1);
   border-radius: 10px;
   &:hover {
     transform: scale(1.01);
@@ -56,25 +56,4 @@
   font-weight: bold;
   color: white;
   opacity: 0.7;
-}
-
-.readMore {
-  // display: block;
-  display: inline-block;
-  position: absolute;
-  margin-left: 200px;
-  text-align: right;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  padding: 8px 14px;
-  color: #051e34;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 8px transparentize(black, 0.9);
-  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
-  border-radius: 10px;
-  &:hover {
-    background-color: rgb(224, 222, 222);
-  }
 }
