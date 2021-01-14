@@ -13,11 +13,11 @@ $horizontal-padding: 20px;
 
 .logoContainer {
 	$vertical-padding: 15px;
-	
+
 	flex-shrink: 0;
 	display: block;
 	padding: $vertical-padding 0 $vertical-padding ($horizontal-padding + 12px);
-	
+
 	&:hover .logo {
 		transform: translateY(-2px);
 	}
@@ -31,7 +31,7 @@ $horizontal-padding: 20px;
 
 .divider {
 	$height: 2px;
-	
+
 	flex-shrink: 0;
 	margin: 0 $horizontal-padding;
 	height: $height;
@@ -47,7 +47,7 @@ $horizontal-padding: 20px;
 
 .searchIcon {
 	$offset: 12px;
-	
+
 	position: absolute;
 	top: $offset;
 	left: $offset;
@@ -56,13 +56,13 @@ $horizontal-padding: 20px;
 
 .searchInput {
 	$vertical-padding: 10px;
-	
+
 	width: 100%;
 	padding: $vertical-padding 6px $vertical-padding 36px;
 	color: white;
 	background: transparentize(#eee, 0.9);
 	border-radius: 8px;
-	
+
 	&::placeholder {
 		color: #a0aec0;
 	}
@@ -70,7 +70,7 @@ $horizontal-padding: 20px;
 
 .posts {
 	$vertical-padding: 20px;
-	
+
 	flex-grow: 1;
 	overflow-y: auto;
 	margin-top: $vertical-padding / 2;

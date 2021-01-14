@@ -4,7 +4,8 @@
 	"scripts": {
 		"start": "next",
 		"build": "next build && next export",
-		"clean": "rm -rf .next out"
+		"clean": "rm -rf .next out",
+		"format": "npx prettier --write ."
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.32",

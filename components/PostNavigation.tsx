@@ -18,7 +18,10 @@ interface PostNavigationLinkProps {
 	post: Post
 }
 
-const PostNavigationLink = ({ previous = false, post }: PostNavigationLinkProps) => (
+const PostNavigationLink = ({
+	previous = false,
+	post
+}: PostNavigationLinkProps) => (
 	<Link href="/p/[slug]" as={`/p/${post.slug}`}>
 		<a className={styles.link}>
 			{previous && (
@@ -28,9 +31,7 @@ const PostNavigationLink = ({ previous = false, post }: PostNavigationLinkProps)
 					height={20}
 				/>
 			)}
-			<p className={styles.title}>
-				{post.title}
-			</p>
+			<p className={styles.title}>{post.title}</p>
 			{previous || (
 				<FontAwesomeIcon
 					className={cx(styles.icon, styles.iconRight)}
@@ -42,17 +43,20 @@ const PostNavigationLink = ({ previous = false, post }: PostNavigationLinkProps)
 	</Link>
 )
 
-const PostNavigation = ({ className, previousPost, nextPost }: PostNavigationProps) =>
-	previousPost || nextPost
-		? (
-			<nav className={cx(styles.root, className)}>
-				{previousPost
-					? <PostNavigationLink previous post={previousPost} />
-					: <span />
-				}
-				{nextPost && <PostNavigationLink post={nextPost} />}
-			</nav>
-		)
-		: null
+const PostNavigation = ({
+	className,
+	previousPost,
+	nextPost
+}: PostNavigationProps) =>
+	previousPost || nextPost ? (
+		<nav className={cx(styles.root, className)}>
+			{previousPost ? (
+				<PostNavigationLink previous post={previousPost} />
+			) : (
+				<span />
+			)}
+			{nextPost && <PostNavigationLink post={nextPost} />}
+		</nav>
+	) : null
 
 export default PostNavigation

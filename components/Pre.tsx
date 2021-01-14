@@ -7,7 +7,7 @@ export interface PreProps {
 
 const Pre = ({ className, children }: PreProps) => {
 	const language = className.replace(/^language\-/, '') as Language
-	
+
 	return (
 		<Highlight {...defaultProps} code={children} language={language}>
 			{({ className, tokens, getLineProps, getTokenProps }) => (

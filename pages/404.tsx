@@ -9,7 +9,7 @@ import WithSidebar from 'components/WithSidebar'
 import styles from 'styles/pages/404.module.scss'
 
 const TITLE = '404 | memorize.ai blog'
-const DESCRIPTION = 'Oh no! You must be lost. There\'s nothing at this URL.'
+const DESCRIPTION = "Oh no! You must be lost. There's nothing at this URL."
 
 export interface NotFoundProps {
 	posts: Post[]
@@ -17,7 +17,7 @@ export interface NotFoundProps {
 
 const NotFound: NextPage<NotFoundProps> = ({ posts }) => {
 	const url = `https://blog.memorize.ai${useRouter().asPath}`
-	
+
 	return (
 		<WithSidebar className={styles.root} posts={posts}>
 			<Head>
@@ -25,9 +25,17 @@ const NotFound: NextPage<NotFoundProps> = ({ posts }) => {
 				<meta key="description" name="description" content={DESCRIPTION} />
 				<meta key="meta-og-url" property="og:url" content={url} />
 				<meta key="meta-og-title" property="og:title" content={TITLE} />
-				<meta key="meta-og-description" property="og:description" content={DESCRIPTION} />
+				<meta
+					key="meta-og-description"
+					property="og:description"
+					content={DESCRIPTION}
+				/>
 				<meta key="meta-twitter-title" name="twitter:title" content={TITLE} />
-				<meta key="meta-twitter-description" name="twitter:description" content={DESCRIPTION} />
+				<meta
+					key="meta-twitter-description"
+					name="twitter:description"
+					content={DESCRIPTION}
+				/>
 				<title key="title">{TITLE}</title>
 			</Head>
 			<h1 className={styles.title}>
