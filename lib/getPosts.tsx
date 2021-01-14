@@ -13,10 +13,9 @@ const getPosts = () =>
 		.map(path => {
 			const { default: Body, meta } = require(`../posts/${path}`)
 			const by = USERS[meta.by]
-			
-			if (!by)
-				throw new Error(`Unable to find user "${meta.by}"`)
-			
+
+			if (!by) throw new Error(`Unable to find user "${meta.by}"`)
+
 			return {
 				...meta,
 				slug: path.replace(/\.mdx$/, ''),

@@ -28,25 +28,29 @@ export interface SidebarProps {
 const Sidebar = ({ className, posts, onRowClick }: SidebarProps) => {
 	const { slug } = useRouter().query
 	const [query, setQuery] = useRecoilState(queryState)
-	
+
 	const filteredPosts = useMemo(() => {
 		const normalizedQuery = normalize(query)
-		
-		return posts.filter(post =>
-			normalize(post.title).includes(normalizedQuery) ||
-			normalize(post.description).includes(normalizedQuery) ||
-			normalize(post.date).includes(normalizedQuery) ||
-			post.topics.some(topic => normalize(topic).includes(normalizedQuery)) ||
-			normalize(post.by.name).includes(normalizedQuery) ||
-			normalize(post.by.email).includes(normalizedQuery) ||
-			normalize(post.body).includes(normalizedQuery)
+
+		return posts.filter(
+			post =>
+				normalize(post.title).includes(normalizedQuery) ||
+				normalize(post.description).includes(normalizedQuery) ||
+				normalize(post.date).includes(normalizedQuery) ||
+				post.topics.some(topic => normalize(topic).includes(normalizedQuery)) ||
+				normalize(post.by.name).includes(normalizedQuery) ||
+				normalize(post.by.email).includes(normalizedQuery) ||
+				normalize(post.body).includes(normalizedQuery)
 		)
 	}, [posts, query])
-	
-	const onQueryChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-		setQuery(event.target.value)
-	}, [setQuery])
-	
+
+	const onQueryChange = useCallback(
+		(event: ChangeEvent<HTMLInputElement>) => {
+			setQuery(event.target.value)
+		},
+		[setQuery]
+	)
+
 	return (
 		<aside className={cx(styles.root, className)}>
 			<Link href="/">

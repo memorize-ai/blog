@@ -13,7 +13,7 @@ export interface PostBodyProps {
 
 const PostBody = ({ className, allowLinks = true, post }: PostBodyProps) => {
 	const Body = require(`../posts/${post.slug}.mdx`).default
-	
+
 	return (
 		<article className={cx(styles.root, className)}>
 			<CustomMDXProvider allowLinks={allowLinks}>

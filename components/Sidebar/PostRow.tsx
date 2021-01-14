@@ -17,18 +17,10 @@ const SidebarPostRow = ({ post, selected, onClick }: SidebarPostRowProps) => (
 			className={cx(styles.root, { [styles.selected]: selected })}
 			onClick={onClick}
 		>
-			<p className={styles.title}>
-				{post.title}
-			</p>
-			<p className={styles.description}>
-				{post.description}
-			</p>
-			<p className={styles.topics}>
-				{post.topics.join(', ')}
-			</p>
-			<p className={styles.date}>
-				{post.date}
-			</p>
+			<p className={styles.title}>{post.title}</p>
+			<p className={styles.description}>{post.description}</p>
+			<p className={styles.topics}>{post.topics.join(', ')}</p>
+			<p className={styles.date}>{post.date}</p>
 		</a>
 	</Link>
 )

@@ -24,16 +24,19 @@ const WithSidebar = ({
 	children
 }: PropsWithChildren<WithSidebarProps>) => {
 	const [isShowing, setIsShowing] = useRecoilState(isSidebarShowingState)
-	
+
 	const hide = useCallback(() => {
 		setIsShowing(false)
 	}, [setIsShowing])
-	
-	const show = useCallback((event: MouseEvent) => {
-		event.stopPropagation()
-		setIsShowing(true)
-	}, [setIsShowing])
-	
+
+	const show = useCallback(
+		(event: MouseEvent) => {
+			event.stopPropagation()
+			setIsShowing(true)
+		},
+		[setIsShowing]
+	)
+
 	return (
 		<div className={styles.root}>
 			<Sidebar

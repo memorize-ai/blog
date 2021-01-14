@@ -1,31 +1,31 @@
 .root {
-  display: block;
-  position: relative;
-  text-decoration: none;
-  border-width: 10px;
-  cursor: pointer;
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
+	display: block;
+	position: relative;
+	text-decoration: none;
+	border-width: 10px;
+	cursor: pointer;
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
 }
 
 .readMore {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  padding: 8px 14px;
-  color: #051e34;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 8px transparentize(black, 0.9);
-  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
-  border-radius: 10px;
-  margin-bottom: 35px;
-  margin-right: 35px;
-  &:hover {
-    background-color: rgb(224, 222, 222);
-  }
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-weight: 900;
+	display: flex;
+	align-items: center;
+	padding: 8px 14px;
+	color: #051e34;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 8px transparentize(black, 0.9);
+	transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+	border-radius: 10px;
+	margin-bottom: 35px;
+	margin-right: 35px;
+	&:hover {
+		background-color: rgb(224, 222, 222);
+	}
 }
